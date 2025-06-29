@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKSAD - Premium Online Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <p>Free shipping on orders over $50 | <span>30-day return policy</span></p>
+            <div class="top-links">
+                <a href="#"><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</a>
+                <a href="#"><i class="fas fa-envelope"></i> support@aksad.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><span>AKSAD</span></a>
+                </div>
+                
+                <!-- Mega Menu -->
+                <nav class="mega-menu">
+                    <ul id="MenuItems">
+                        <li class="mega-dropdown">
+                            <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-content">
+                                <div class="mega-row">
+                                    <h4>Men's Fashion</h4>
+                                    <ul>
+                                        <li><a href="#">Shirts</a></li>
+                                        <li><a href="#">Pants</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#">Accessories</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-row">
+                                    <h4>Women's Fashion</h4>
+                                    <ul>
+                                        <li><a href="#">Dresses</a></li>
+                                        <li><a href="#">Tops</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-row">
+                                    <h4>Electronics</h4>
+                                    <ul>
+                                        <li><a href="#">Smartphones</a></li>
+                                        <li><a href="#">Laptops</a></li>
+                                        <li><a href="#">Headphones</a></li>
+                                        <li><a href="#">Cameras</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-row">
+                                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Mega Menu Banner">
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="#" class="wishlist-icon" id="wishlistCount"><i class="far fa-heart"></i> <span>0</span></a>
+                    <a href="#" class="cart-icon" id="cartCount"><i class="fas fa-shopping-cart"></i> <span>0</span></a>
+                    <a href="#account" class="user-icon"><i class="fas fa-user"></i></a>
+                    <i class="fas fa-bars menu-icon" onclick="menutoggle()"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+                <button class="view-cart-btn">View Cart</button>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </header>
+
+    <!-- Hero Banner with Slider -->
+    <section class="hero-slider">
+        <div class="hero-slides">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Summer Collection 2023</h1>
+                        <p>Discover our new arrivals with up to 40% discount</p>
+                        <a href="#products" class="btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1399&q=80')">
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Premium Electronics</h1>
+                        <p>The latest gadgets with cutting-edge technology</p>
+                        <a href="#products" class="btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Free Shipping</h4>
+                    <p>On all orders over $50</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-undo"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>Secure Payment</h4>
+                    <p>100% secure checkout</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="feature-content">
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Men's Fashion">
+                    <div class="category-overlay">
+                        <h3>Men's Fashion</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Women's Fashion">
+                    <div class="category-overlay">
+                        <h3>Women's Fashion</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Electronics">
+                    <div class="category-overlay">
+                        <h3>Electronics</h3>
+                        <a href="#" class="btn btn-outline">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with Filter -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="product-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="men">Men</button>
+                    <button class="filter-btn" data-filter="women">Women</button>
+                    <button class="filter-btn" data-filter="electronics">Electronics</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="1"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="1"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="1"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80" alt="Premium Cotton T-Shirt">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="1">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Men's Fashion</span>
+                        <h4><a href="#">Premium Cotton T-Shirt</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$29.99</span>
+                                <span class="original-price">$39.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="2"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="2"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="2"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Elegant Summer Dress">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="2">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Women's Fashion</span>
+                        <h4><a href="#">Elegant Summer Dress</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$49.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(18)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-badge">New</div>
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="3"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="3"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="3"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wireless Headphones">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="3">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Electronics</span>
+                        <h4><a href="#">Wireless Headphones</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$99.99</span>
+                                <span class="original-price">$129.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(42)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="4"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="4"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="4"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Leather Wallet">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="4">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Accessories</span>
+                        <h4><a href="#">Leather Wallet</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$35.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="5"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="5"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="5"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Designer Sneakers">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="5">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Men's Fashion</span>
+                        <h4><a href="#">Designer Sneakers</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$120.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(36)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-badge">Sale</div>
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="6"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="6"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="6"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1399&q=80" alt="Smart Watch">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="6">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Electronics</span>
+                        <h4><a href="#">Smart Watch</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$150.00</span>
+                                <span class="original-price">$199.99</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(29)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="7"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="7"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="7"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80" alt="Stylish Handbag">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="7">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Women's Fashion</span>
+                        <h4><a href="#">Stylish Handbag</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$65.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(51)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-tools">
+                        <button class="wishlist-btn" data-product="8"><i class="far fa-heart"></i></button>
+                        <button class="compare-btn" data-product="8"><i class="fas fa-exchange-alt"></i></button>
+                        <button class="quick-view-btn" data-product="8"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-thumb">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Sunglasses">
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-product="8">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Accessories</span>
+                        <h4><a href="#">Sunglasses</a></h4>
+                        <div class="product-bottom-details">
+                            <div class="product-price">
+                                <span class="discounted-price">$75.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(22)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="#" class="btn">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Banner -->
+    <section class="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" class="offer-img" alt="Smart Band 4">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on AKSAD</p>
+                    <h1>Smart Band 4</h1>
+                    <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small><br>
+                    <a href="#" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial">
+        <div class="small-container">
+            <h2 class="title">Customer Reviews</h2>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I absolutely love my purchase from AKSAD! The quality is exceptional and the shipping was super fast. Will definitely shop here again.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sarah Parker">
+                    <h3>Sarah Parker</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Great customer service and amazing products. The return process was hassle-free when I needed to exchange a size. Highly recommended!</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Mike Smith">
+                    <h3>Mike Smith</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Found exactly what I was looking for at a reasonable price. The product exceeded my expectations in terms of quality and design.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Emma Johnson">
+                    <h3>Emma Johnson</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="https://via.placeholder.com/150x80?text=NIKE" alt="Nike">
+                </div>
+                <div class="col-5">
+                    <img src="https://via.placeholder.com/150x80?text=ADIDAS" alt="Adidas">
+                </div>
+                <div class="col-5">
+                    <img src="https://via.placeholder.com/150x80?text=APPLE" alt="Apple">
+                </div>
+                <div class="col-5">
+                    <img src="https://via.placeholder.com/150x80?text=SAMSUNG" alt="Samsung">
+                </div>
+                <div class="col-5">
+                    <img src="https://via.placeholder.com/150x80?text=SONY" alt="Sony">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html"><span>AKSAD</span></a>
+                    </div>
+                    <p>Premium eCommerce platform offering the best products with exceptional customer service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@aksad.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/50x30?text=VISA" alt="Visa">
+                    <img src="https://via.placeholder.com/50x30?text=MASTERCARD" alt="Mastercard">
+                    <img src="https://via.placeholder.com/50x30?text=PAYPAL" alt="PayPal">
+                    <img src="https://via.placeholder.com/50x30?text=APPLEPAY" alt="Apple Pay">
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 AKSAD. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
